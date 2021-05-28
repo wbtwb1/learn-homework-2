@@ -1,3 +1,4 @@
+from datetime import datetime, date , time, timedelta
 """
 Домашнее задание №2
 
@@ -13,7 +14,15 @@ def print_days():
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
+    # dt_now = datetime.now ()
+    # delta1=timedelta (days=1)
+    # dt_yesterday = dt_now - delta1
+    # delta2 = timedelta (days=30)
+    # dt_30days_ago = dt_now - delta2
+    # print (dt_yesterday,'\n',dt_now,'\n',dt_30days_ago)
+
+
+
 
 
 def str_2_datetime(date_string):
@@ -21,7 +30,11 @@ def str_2_datetime(date_string):
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
+    date_string = "01/01/20 12:10:03.234567"
+    dateFormatter = '%d/%m/%Y %H:%M:%S.%f'
+    date_obj = datetime.strptime( date_string, dateFormatter )
+    print (date_obj)
+
 
 if __name__ == "__main__":
     print_days()
